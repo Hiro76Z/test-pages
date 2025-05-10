@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ボーイスカウト新居浜第2団スカウトクラブ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", sans-serif;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 1em 2em;
+      border-bottom: 1px solid #ccc;
+    }
+    header img {
+      height: 40px;
+    }
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .hero img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .slogan {
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #222;
+      padding: 1.5em 1em;
+      background-color: #f5f5f5;
+    }
+    footer {
+      text-align: center;
+      background-color: #fafafa;
+      padding: 1em;
+      border-top: 1px solid #ccc;
+    }
+    footer a {
+      margin: 0 1em;
+      color: #0056b3;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://www.scout.or.jp/wp-content/uploads/2024/07/cmlogo2-rgb-s.png" alt="スカウトロゴ">
+    <div>
+      <nav>
+        <a href="#">トップページ</a>
+        <a href="#">クラブ紹介</a>
+        <a href="#">活動記録</a>
+        <a href="#">クラブだより</a>
+        <a href="#">メンバー</a>
+        <a href="#">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+  <div class="hero">
+    <img id="heroImage" src="images/slide1.jpg" alt="活動写真">
+  </div>
+  <div class="slogan">スカウトクラブはたくましい青少年を育成するスカウト活動を支援しています</div>
+  <footer>
+    <a href="https://niihama2dan.scout.jp/" target="_blank">ボーイスカウト新居浜第2団</a>
+    <a href="https://ehime.scout.jp/" target="_blank">ボーイスカウト愛媛県連盟</a>
+  </footer>
+  <script>
+    const images = ["images/slide1.jpg", "images/slide2.jpg", "images/slide3.jpg", "images/slide4.jpg", "images/slide5.jpg"];
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      document.getElementById('heroImage').src = images[current];
+    }, 4000);
+  </script>
+</body>
+</html>
